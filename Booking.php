@@ -1,12 +1,10 @@
 <?php
-session_start();
 if (empty($_SESSION['id'])) {
     header("Location: logout.php");
 }
 if (!empty($_SESSION['Did'])) {
     header("Location: index.php");
 }
-$con = mysqli_connect("localhost", "root", "", "project web");
 $Did = $_GET['Did'];
 $queryDriver = mysqli_query($con, "SELECT * FROM `driver` WHERE `DriverId`='$Did'");
 if (!$queryDriver){
