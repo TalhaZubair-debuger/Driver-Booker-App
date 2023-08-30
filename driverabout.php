@@ -1,15 +1,11 @@
 <?php
 require 'config.php';
-session_start();
+
 // echo $_SESSION['id'];
 if (empty($_SESSION['Did'])) {
     header("Location: logout.php");
 }
 
-// if (empty($_SESSION['DriverId'])) {
-//     header("Location: index.php");
-// }
-$con = mysqli_connect("localhost", "root", "", "project web");
 $Id = $_SESSION['Did'];
 $sql = mysqli_query($con, "SELECT `email`, `name`, `cnic`, `phone`, `password`, `driverAbout`, `rate` FROM `driver` WHERE DriverId = '$Id'");
 $row = mysqli_fetch_assoc($sql);
