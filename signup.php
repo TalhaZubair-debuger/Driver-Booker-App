@@ -1,11 +1,6 @@
 <?php
 require 'config.php';
 
-// if (!empty($_SESSION['id'])) {
-//     header("Location: index.php");
-// }
-session_start();
-$con = mysqli_connect("localhost", "root", "", "project web");
 if (isset($_POST['submit'])) {
     $person = $_POST['person'];
     $email = $_POST['email'];
