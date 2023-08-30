@@ -1,11 +1,9 @@
 <?php
 require 'config.php';
-session_start();
-// echo $_SESSION['id'];
+
 if (empty($_SESSION['id']) && empty($_SESSION['Did'])) {
     header("Location: logout.php");
 }
-$con = mysqli_connect("localhost", "root", "", "project web");
 $showDrivers = mysqli_query($con, "SELECT * FROM `driver`");
 
 ?>
