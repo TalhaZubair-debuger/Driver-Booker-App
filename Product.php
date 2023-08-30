@@ -1,4 +1,5 @@
 <?php
+require 'config.php';
 $Id = $_GET['Did'];
 $showDrivers = mysqli_query($con, "SELECT * FROM `driver` WHERE `DriverId`= '$Id'");
 if (mysqli_num_rows($showDrivers) > 0) {
