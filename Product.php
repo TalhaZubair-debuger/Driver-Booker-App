@@ -1,9 +1,4 @@
 <?php
-session_start();
-// if (empty($_SESSION['id'])) {
-//     header("Location: login.php");
-// }
-$con = mysqli_connect("localhost", "root", "", "project web");
 $Id = $_GET['Did'];
 $showDrivers = mysqli_query($con, "SELECT * FROM `driver` WHERE `DriverId`= '$Id'");
 if (mysqli_num_rows($showDrivers) > 0) {
