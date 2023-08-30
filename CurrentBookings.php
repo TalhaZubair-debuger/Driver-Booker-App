@@ -1,10 +1,8 @@
 <?php
 require 'config.php';
-session_start();
 if (empty($_SESSION['Did'])) {
     header("Location: logout.php");
 }
-$con = mysqli_connect("localhost", "root", "", "project web");
 $Did = $_SESSION['Did'];
 $bookingQuery = mysqli_query($con, "SELECT `hours`, `total-amount`, `DriverId`, `userId` 
 FROM `booking` WHERE `DriverId`=$Did");
