@@ -1,7 +1,5 @@
 <?php
 require 'config.php';
-session_start();
-// echo $_SESSION['id'];
 if (!empty($_SESSION['Did'])) {
     header("Location: index.php");
 }
@@ -9,7 +7,6 @@ if (empty($_SESSION['id'])) {
     header("Location: logout.php");
 }
 
-$con = mysqli_connect("localhost", "root", "", "project web");
 $Id = $_SESSION['id'];
 $sql = mysqli_query($con, "SELECT `email`, `name`, `cnic`,`phone` FROM `user` WHERE id = '$Id'");
 $row = mysqli_fetch_assoc($sql);
