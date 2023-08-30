@@ -4,8 +4,6 @@ session_start();
 if (empty($_SESSION['id']) && empty($_SESSION['Did'])) {
     header("Location: logout.php");
 }
-$con = mysqli_connect("localhost", "root", "", "project web");
-// echo $_SESSION['id'];
 $showDrivers = mysqli_query($con, "SELECT * FROM `driver`");
 // $row = mysqli_fetch_assoc($showDrivers);
 
