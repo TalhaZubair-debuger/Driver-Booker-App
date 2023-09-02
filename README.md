@@ -1,9 +1,9 @@
 # Driver-Booker-App
 An application for users to book a driver for a given amount of hours and for any person to register themselves as a driver. 
 I developed this website while learning the topics of FullStack development, which I learned from my university and GeekFoeGeeks documentation. I applied the fresh knowledge from these sources to the project, so you might see unorganized code. I also didn't follow the MVC structure but I used all major concepts required in any web application such as sessions, cookies, database handling, fetching data from the database, form handling, error handling, navigation between pages, authentication, and authorization. This is also completely responsive and user-friendly.
-#sessions
+# sessions
 SignUp/Login is required to get into the website either as a user or as a driver. It creates different session IDs for both the users one named 'id' other named as 'Did'. User Login takes you to the home page of the website. Driver Login takes you to the driver dashboard, where he/she can check several stats and check their current bookings
-#authorization
+# authorization
 The driver is authorized to book another driver and manage the user profile. 
 The user is not able to manage the driver account and check bookings
 
